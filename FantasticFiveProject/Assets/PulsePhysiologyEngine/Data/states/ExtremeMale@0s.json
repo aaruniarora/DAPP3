@@ -10,19 +10,19 @@
   "Name": "ExtremeMale",
   "Age": {
    "ScalarTime": {
-    "Value": 65,
+    "Value": 15,
     "Unit": "yr"
    }
   },
   "Weight": {
    "ScalarMass": {
-    "Value": 99.01141488,
+    "Value": 50,
     "Unit": "kg"
    }
   },
   "Height": {
    "ScalarLength": {
-    "Value": 7,
+    "Value": 5.4,
     "Unit": "ft"
    }
   },
