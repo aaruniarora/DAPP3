@@ -479,10 +479,10 @@ RectTransform:
   m_Father: {fileID: 2141336741}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32, y: 968}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -26, y: 982}
+  m_SizeDelta: {x: -116, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340272463
 MonoBehaviour:
@@ -508,7 +508,7 @@ MonoBehaviour:
 
     Pacemakers
     are one of the earliest and widely used bioengineering inventions. It is a small
-    medical device that is implanted in a person''s chest and'
+    medical device that is implanted in a person''s '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5092b1c67aed9da438e5c1cad81d1205, type: 2}
   m_sharedMaterial: {fileID: -934408768870158580, guid: 5092b1c67aed9da438e5c1cad81d1205, type: 2}
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 32.20343, w: -73.29801}
+  m_margin: {x: 2.773758, y: 0, z: 32.20343, w: -73.29801}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -759,7 +759,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 83.3, y: 60.764038}
+  m_SizeDelta: {x: 77, y: 60.764038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &472476765
 MonoBehaviour:
@@ -1454,7 +1454,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 83.3, y: 60.764038}
+  m_SizeDelta: {x: 77, y: 60.764038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097455147
 MonoBehaviour:
@@ -1763,7 +1763,7 @@ GameObject:
   - component: {fileID: 1257775998}
   - component: {fileID: 1257776001}
   m_Layer: 5
-  m_Name: NavigationBar
+  m_Name: NavigationBarOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2046,7 +2046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32, y: 1031.3403}
+  m_AnchoredPosition: {x: -25, y: 1031.3403}
   m_SizeDelta: {x: 200, y: 31.3194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369491877
@@ -2187,7 +2187,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 83.3, y: 60.764038}
+  m_SizeDelta: {x: 77, y: 60.764038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390016166
 MonoBehaviour:
@@ -2306,7 +2306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.5366058, y: 15.758911}
+  m_AnchoredPosition: {x: 1.5366211, y: 15.758911}
   m_SizeDelta: {x: -7.5387, y: -31.5179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451626939
@@ -2775,7 +2775,7 @@ GameObject:
   - component: {fileID: 1619231455}
   - component: {fileID: 1619231454}
   m_Layer: 5
-  m_Name: NavigationBar (1)
+  m_Name: NavigationBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3203,7 +3203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -32, y: 848}
+  m_AnchoredPosition: {x: -23, y: 862}
   m_SizeDelta: {x: -116, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710589095
@@ -3226,15 +3226,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "connected to the heart using wires (leads) to help regulate their heartbeat.
-    The device has two main components: the pulse generator and the leads.\n \nThe
-    leads are thin wires that are attached to the pulse generator and are threaded
-    through a vein into the heart. The leads have electrodes at their tips that are
-    attached to the heart tissue.\n \nThe pulse generator has a battery (lithium
-    iron), a microprocessor, a timer, and a sensing circuit. The battery powers the
-    device and the microprocessor controls the timing and strength of the electrical
-    impulses that are delivered to the heart, by the help of real time information
-    provided by the sensing circuit, the timer and the leads.\n\n<voffset=1m><size=16><color=#000000>Why
+  m_text: "chest and connected to the heart using wires (leads) to help regulate
+    their heartbeat. The device has two main components: the pulse generator and
+    the leads.\n \nThe leads are thin wires that are attached to the pulse generator
+    and are threaded through a vein into the heart. The leads have electrodes at
+    their tips that are attached to the heart tissue.\n \nThe pulse generator has
+    a battery (lithium iron), a microprocessor, a timer, and a sensing circuit. The
+    battery powers the device and the microprocessor controls the timing and strength
+    of the electrical impulses that are delivered to the heart, by the help of real
+    time information provided by the sensing circuit, the timer and the leads.\n\n<voffset=1m><size=16><color=#000000>Why
     do we use pacemakers?</color></size></voffset>\nWe use pacemakers to treat heart
     conditions that cause an irregular or slow heartbeat. The heart has its own electrical
     system that controls the timing and rhythm of its contractions. When this system
@@ -3336,7 +3336,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -81.46675, w: -277.56476}
+  m_margin: {x: 0, y: 0, z: -71.75859, w: -277.56476}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3520,7 +3520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98, y: 935.1}
+  m_AnchoredPosition: {x: 97.999985, y: 949.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805361400
@@ -4183,7 +4183,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 83.3, y: 60.764038}
+  m_SizeDelta: {x: 77, y: 60.764038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104633090
 MonoBehaviour:
