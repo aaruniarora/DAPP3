@@ -6,21 +6,30 @@ using TMPro;
 
 public class ShowHideText : MonoBehaviour
 {
-    public TMP_Text DisplayedText;
-    public Button DisplayedButton;
-    //public TMP_Text DisplayedButtonText;
+    public TMP_Text DisplayedText; //This is the answer before the link
+    public Button DisplayedButton; //This is the Imperial Link (it's a button)
+    [SerializeField] Button[] buttons; //The option buttons
  
-    public void Display()
-    {
-        DisplayedText.enabled = true;
-        DisplayedButton.gameObject.SetActive(true);
-        //DisplayedButtonText.enabled = true;
-    }
-
+ 
+    //Initailly the Imperial link and answer are invisible
     void Start()
     {
         DisplayedText.enabled = false; 
         DisplayedButton.gameObject.SetActive(false);
-        //DisplayedButtonText.enabled = false;
     }
+
+
+    //When any option is clicked the answer is displayed 
+    //and the options are disabled
+    public void Display() 
+    {
+        DisplayedText.enabled = true; 
+        DisplayedButton.gameObject.SetActive(true);
+        for (int i=0; i<buttons.Length; i++)
+        {
+            //buttons[i].SetActive(false);
+            buttons[i].enabled = false;
+        }
+    }
+
 }
