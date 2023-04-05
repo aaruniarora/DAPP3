@@ -7,22 +7,40 @@ public class Trial : MonoBehaviour
     [Header("Variables")]
     GameObject PEDObject;
     PulseEngineDriver PEDScript;
+    public TextAsset BradyFile; // declare a TextAsset variable to hold the state file data
+    public TextAsset NormalFile;
+    public TextAsset TachyFile;
+    public TextAsset ArrhythmiaFile;
+
     // Start is called before the first frame update
     void Start()
     {
         PEDObject = GameObject.Find("Pulse Engine Driver");
         PEDScript = PEDObject.GetComponent<PulseEngineDriver>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        BradyFile = Resources.Load<TextAsset>("states/Bradycardic@0s");
+        NormalFile = Resources.Load<TextAsset>("states/DefaultMale@0s");
+        TachyFile = Resources.Load<TextAsset>("states/Tachycardic@0s");
+        ArrhythmiaFile = Resources.Load<TextAsset>("states/DefaultMale@0s");
     }
 
-    void ChangeData()
+    public void BradyCardiac()
     {
-        PEDScript.initialStateFile = "C:\Users\aarun\OneDrive - Imperial College London\BIOE60005 Bioengineering Group Project\Unity\BPM\Assets\PulsePhysiologyEngine\Data\states\Bradycardic@0s.json";
+        PEDScript.initialStateFile = BradyFile;
     }
 
+    public void NormalCardia()
+    {
+        PEDScript.initialStateFile = NormalFile;
+    }
+
+    public void TachyCardiac()
+    {
+        PEDScript.initialStateFile = TachyFile;
+    }
+
+    public void ArrhythmiaCardia()
+    {
+        PEDScript.initialStateFile = ArrhythmiaFile;
+    }
 }
