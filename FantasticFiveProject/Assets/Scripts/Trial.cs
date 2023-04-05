@@ -19,4 +19,10 @@ public class Trial : MonoBehaviour
     {
         
     }
+
+    void ChangeData()
+    {
+        PEDScript.initialStateFile = "C:\Users\aarun\OneDrive - Imperial College London\BIOE60005 Bioengineering Group Project\Unity\BPM\Assets\PulsePhysiologyEngine\Data\states\Bradycardic@0s.json";
+    }
+
 }
