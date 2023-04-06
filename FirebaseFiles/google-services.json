@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953732048022",
+    "project_id": "fantastic-five-45b98",
+    "storage_bucket": "fantastic-five-45b98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953732048022:android:12d445374063780b210eb7",
+        "android_client_info": {
+          "package_name": "com.DAPP3.FantasticFiveProject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953732048022-f8158pr9p049h8iblatu07jtmvnrr98a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkTVkdaF2HBtENcrKODc7rb5BJi-fPGNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953732048022-f8158pr9p049h8iblatu07jtmvnrr98a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
