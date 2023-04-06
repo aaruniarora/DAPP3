@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">100593769047</string>
+  <string name="google_storage_bucket" translatable="false">fantastic-five-2.appspot.com</string>
+  <string name="project_id" translatable="false">fantastic-five-2</string>
+  <string name="google_api_key" translatable="false">AIzaSyCoE5oL6teoaMe5urn7JpkJ2dyprSnyQ7Y</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCoE5oL6teoaMe5urn7JpkJ2dyprSnyQ7Y</string>
+  <string name="google_app_id" translatable="false">1:100593769047:android:7453d270a39cd293b1e112</string>
+  <string name="default_android_client_id" translatable="false">100593769047-nn25s6h1idnaouuuaoq6mor5mmcl002g.apps.googleusercontent.com</string>
+  <string name="default_web_client_id" translatable="false">100593769047-6ubl31n6u8dmjsrth2go9dus07rfko10.apps.googleusercontent.com</string>
+</resources>
