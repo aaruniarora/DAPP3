@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Firebase;
 using Firebase.Auth;
+using Firebase.Database;
 using Google;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,24 +20,32 @@ public class GoogleSignInDemo : MonoBehaviour
     public string webClientId = "<your client id here>";
 
     private FirebaseAuth auth;
+    private FirebaseUser User;
+    private FirebaseDatabase datab;
+    public DependencyStatus dependencyStatus;
     private GoogleSignInConfiguration configuration;
 
-    private void Awake()
+    /*private void Awake()
     {
         configuration = new GoogleSignInConfiguration { WebClientId = webClientId, RequestEmail = true, RequestIdToken = true };
-        CheckFirebaseDependencies();
+        
+        CheckFirebaseDatabase();
+        CheckFirebaseAuthentication();
     }
 
-    private void CheckFirebaseDependencies()
+    private void CheckFirebaseAuthentication()
     {
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
             if (task.IsCompleted)
             {
                 if (task.Result == DependencyStatus.Available)
+                {   
+                    //datab = FirebaseDatabase.DefaultInstance;
                     auth = FirebaseAuth.DefaultInstance;
+                    }
                 else
-                    AddToInformation("Could not resolve all Firebase dependencies: " + task.Result.ToString());
+                {AddToInformation("Could not resolve all Firebase dependencies: " + task.Result.ToString());}
             }
             else
             {
@@ -43,6 +53,55 @@ public class GoogleSignInDemo : MonoBehaviour
             }
         });
     }
+
+    private void CheckFirebaseDatabase()
+    {
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+        {
+            if (task.IsCompleted)
+            {
+                if (task.Result == DependencyStatus.Available)
+                {   
+                    datab = FirebaseDatabase.DefaultInstance;
+                    //auth = FirebaseAuth.DefaultInstance;
+                    }
+                else
+                {AddToInformation("Could not resolve all Firebase dependencies: " + task.Result.ToString());}
+            }
+            else
+            {
+                AddToInformation("Dependency check was not completed. Error : " + task.Exception.Message);
+            }
+        });
+    }*/
+
+    async void Awake() 
+    {
+        var dependencyStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
+        if (dependencyStatus == DependencyStatus.Available)
+        {
+            // all good, firebase init passed
+            AddToInformation("Firebase Loaded");
+            InitializeFirebase();
+        }
+        else
+        {
+            AddToInformation("Firebase Failed");
+        }
+    }
+
+    private void InitializeFirebase()
+    {
+        AddToInformation("Setting up Firebase Authentication");
+
+        //Set the authentication instance object
+        auth = FirebaseAuth.DefaultInstance;
+        //Set the database instance object
+        datab = FirebaseDatabase.DefaultInstance;
+        AddToInformation("Setting up Firebase ");
+        AddToInformation("Welce: !");
+    }
+
 
     public void SignInWithGoogle() { OnSignIn(); }
     public void SignOutFromGoogle() { OnSignOut(); }
@@ -114,10 +173,33 @@ public class GoogleSignInDemo : MonoBehaviour
             }
             else
             {
-                AddToInformation("Sign In Successful.");
+                AddToInformation("1. Sign In Successful.");
+                User = task.Result;
+                AddToInformation("2. Signed In and user made");
+                StartCoroutine(DatabaseRegistration(User));
+                AddToInformation("5. Signed In, user made");
             }
         });
+
+        AddToInformation("6. Sign In Successful and user made" );
     }
+
+    private IEnumerator DatabaseRegistration(Firebase.Auth.FirebaseUser _user)
+    {        
+        AddToInformation("3. Sign In Successful and user made" + User.UserId.ToString());   
+        //AddToInformation("3. Sign In Successful and user made" + datab.ToString());   
+        var name = datab.RootReference.Child("users").Child(User.UserId).Child("name").SetValueAsync(User.DisplayName);
+        
+        AddToInformation("Sign In Successful and user made" + User.Email.ToString());
+        var email = datab.RootReference.Child("users").Child(User.UserId).Child("email").SetValueAsync(User.Email);
+        
+        //var name = datab.RootReference.Child("users").Child(User.UserId).Child("name").SetValueAsync(User.DisplayName);
+        yield return new WaitUntil(predicate: () => name.IsCompleted);    
+        
+        AddToInformation("4.Sign In Successful and user made" + User.DisplayName.ToString());
+    }
+
+
 
     public void OnSignInSilently()
     {
