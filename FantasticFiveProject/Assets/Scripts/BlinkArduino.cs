@@ -4,16 +4,36 @@ using System.Text;
 using ArduinoBluetoothAPI;
 
 public class BlinkArduino : MonoBehaviour 
-{    
+{  
+    [Header("CanvasPanels")]
+    public GameObject BPanel;
+    public GameObject NPanel;
+    public GameObject TPanel;
+    public GameObject APanel;  
+
+    [Header("CanvasButtons")]
     public Button btn50BPM; // Bradycardiac
     public Button btn75BPM; // Normal
     public Button btn115BPM; // TachyCardiac
     public Button btn200BPM; // Arrhythmia
-    private BluetoothHelper bluetoothHelper;
+    public Button ResetButton;
+
+    [Header("CanvasTextbox")]
     public Text statusText;
     public Text iffunction;
+
+    [Header("BluetoothAsset")]
+    private BluetoothHelper bluetoothHelper;
     private StringBuilder stringBuilder = new StringBuilder();
 
+    void Awake()
+    {
+        BPanel.SetActive(false);
+        NPanel.SetActive(false);
+        TPanel.SetActive(false);
+        APanel.SetActive(false);
+    }
+    
     void Start () 
     {
         statusText.text = "Hi";
@@ -48,6 +68,11 @@ public class BlinkArduino : MonoBehaviour
         statusText.text = "LED at 50BPM";
         StartCoroutine(BlinkCoroutine("1"));
         statusText.text = "LED and variables at 50BPM";
+
+        BPanel.SetActive(true);
+        NPanel.SetActive(false);
+        TPanel.SetActive(false);
+        APanel.SetActive(false);
     }
 
     public void TaskOnClick75()
@@ -55,6 +80,11 @@ public class BlinkArduino : MonoBehaviour
         statusText.text = "LED at 75BPM";
         StartCoroutine(BlinkCoroutine("2"));
         statusText.text = "LED and variables at 75BPM";
+
+        BPanel.SetActive(false);
+        NPanel.SetActive(true);
+        TPanel.SetActive(false);
+        APanel.SetActive(false);
     }
 
     public void TaskOnClick115()
@@ -62,6 +92,11 @@ public class BlinkArduino : MonoBehaviour
         statusText.text = "LED at 115BPM";
         StartCoroutine(BlinkCoroutine("3"));
         statusText.text = "LED and variables at 115BPM";
+
+        BPanel.SetActive(false);
+        NPanel.SetActive(false);
+        TPanel.SetActive(true);
+        APanel.SetActive(false);
     }
 
     public void TaskOnClick200()
@@ -69,6 +104,19 @@ public class BlinkArduino : MonoBehaviour
         statusText.text = "LED at 200BPM";
         StartCoroutine(BlinkCoroutine("4"));
         statusText.text = "LED and variables at 200BPM";
+
+        BPanel.SetActive(false);
+        NPanel.SetActive(false);
+        TPanel.SetActive(false);
+        APanel.SetActive(true);
+    }
+
+    public void Reset() 
+    {
+        BPanel.SetActive(false);
+        NPanel.SetActive(false);
+        TPanel.SetActive(false);
+        APanel.SetActive(false);
     }
 
     private IEnumerator BlinkCoroutine(string message)
