@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Button Navigation
+    uniqueID: 313853851
+    locked: 0
+  - name: LineRenderer
+    uniqueID: 3586151169
+    locked: 0
+  - name: ECG
+    uniqueID: 1157579859
+    locked: 0
+  - name: BG
+    uniqueID: 2694278797
+    locked: 0
