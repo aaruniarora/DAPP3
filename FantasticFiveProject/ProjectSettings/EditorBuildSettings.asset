@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Aaruni.unity
     guid: 74da63ae5f6a19748abf1357156884b4
   - enabled: 1
-    path: Assets/Scenes/StentScene.unity
+    path: Assets/Scenes/ARScene.unity
     guid: b9f13d6d15818f249a691885f624d8db
   - enabled: 1
     path: Assets/Scenes/LearnMoreScene.unity
