@@ -1,7 +1,7 @@
 Library: lib_burst_generated
 --platform=Android
 --backend=burst-llvm-11
---target=ARMV7A_NEON32
+--target=ARMV8A_AARCH64
 --global-safety-checks-setting=Off
 --dump=Function
 --float-precision=Standard
@@ -96,11 +96,8 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_UNITYADS_RUNTIME
 --compilation-defines=UNITY_UNITYADS_API
 --compilation-defines=ENABLE_MONO
---compilation-defines=NET_STANDARD_2_0
---compilation-defines=NET_STANDARD
---compilation-defines=NET_STANDARD_2_1
---compilation-defines=NETSTANDARD
---compilation-defines=NETSTANDARD2_1
+--compilation-defines=NET_4_6
+--compilation-defines=NET_UNITY_4_8
 --compilation-defines=UNITY_PRO_LICENSE
 --compilation-defines=ENABLE_CUSTOM_RENDER_TEXTURE
 --compilation-defines=ENABLE_DIRECTOR
@@ -111,6 +108,7 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_TIMELINE
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
 --compilation-defines=TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+--compilation-defines=VUFORIA_ANDROID_SETTINGS
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
 --compilation-defines=PACKAGE_TILEMAP
@@ -126,7 +124,7 @@ Library: lib_burst_generated
 --compilation-defines=TIMELINE_FRAMEACCURATE
 --compilation-defines=ENABLE_SPRITESHAPE_BURST
 --generate-link-xml=Temp\burst.link.xml
---output=C:\Users\DELL\OneDrive - Imperial College London\Documents\GitHub\DAPP3\FantasticFiveProject\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
+--output=C:\Users\DELL\OneDrive - Imperial College London\Documents\GitHub\DAPP3\FantasticFiveProject\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
 --root-assembly=C:\Users\DELL\OneDrive - Imperial College London\Documents\GitHub\DAPP3\FantasticFiveProject\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
 --root-assembly=C:\Users\DELL\OneDrive - Imperial College London\Documents\GitHub\DAPP3\FantasticFiveProject\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=C:\Users\DELL\OneDrive - Imperial College London\Documents\GitHub\DAPP3\FantasticFiveProject\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
