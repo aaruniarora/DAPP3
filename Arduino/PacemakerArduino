@@ -1,0 +1,53 @@
+//int ledPin = 13;
+const int PIN_RED   = 5;
+const int PIN_GREEN = 6;
+const int PIN_BLUE  = 7;
+//int randomNumber;
+char command;
+
+void setup() {
+//  pinMode(ledPin, OUTPUT);
+  pinMode(PIN_RED,   OUTPUT);
+  pinMode(PIN_GREEN, OUTPUT);
+  pinMode(PIN_BLUE,  OUTPUT);
+  randomSeed(digitalRead(0));
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    command = Serial.read();
+    if (command == '1') 
+    {
+      blink(50, 255, 0, 0);
+//      digitalWrite(ledPin, HIGH);
+    } 
+    else if (command == '2') 
+    {
+      blink(75, 0, 255, 0);
+//      digitalWrite(ledPin, LOW);
+    }
+    else if (command == '3') 
+    {
+      blink(115, 255, 0, 0);
+//      digitalWrite(ledPin, LOW);
+    }
+    else if (command == '4') 
+    {
+      blink(random(0, 200), 255, 0, 0);
+//      digitalWrite(ledPin, LOW);
+    }
+  }
+}
+
+void blink(int rate, int R, int G, int B) {
+  int interval = 60000 / rate;
+  digitalWrite(PIN_RED,   R);
+  digitalWrite(PIN_GREEN, G);
+  digitalWrite(PIN_BLUE,  B);
+  delay(interval / 2);
+  digitalWrite(PIN_RED, 0);
+  digitalWrite(PIN_GREEN, 0);
+  digitalWrite(PIN_BLUE, 0);
+  delay(interval / 2);
+}
